@@ -30,9 +30,32 @@
   button:focus-visible {
     outline: 4px auto -webkit-focus-ring-color;
   }
+
+  body::-webkit-scrollbar {
+    width: 6px;
+  }
+  
+  body::-webkit-scrollbar-track {
+    @apply bg-zinc-100 dark:bg-zinc-800 rounded-lg;
+  }
+  
+  body::-webkit-scrollbar-thumb {
+    @apply rounded-lg bg-[#6BAF8D];
+  }
+  
+  @supports not selector(::-webkit-scrollbar) {
+    body {
+      scrollbar-color: var(--sb-thumb-color)
+                       var(--sb-track-color);
+    }
+  }
 }
 
 @layer components {
+  .themed-bg {
+    @apply bg-white dark:bg-zinc-900;
+  }
+
   .section {
     @apply w-full max-w-6xl mx-auto px-2 sm:px-4 lg:px-8;
   }

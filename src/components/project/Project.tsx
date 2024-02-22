@@ -9,7 +9,7 @@ type PropsTypes = {
 const Project = ({ project } : PropsTypes) => {
   return (
     <article className="flex flex-col gap-4">
-        <header className="flex gap-6">
+        <header className="flex gap-6 sticky top-0 themed-bg bg-white z-10 py-2 lg:relative lg:py-0">
             <h3 className="font-bold text-2xl">{project.client}</h3>
             <div className="relative pt-2">
                 <Links url={project.url} github={project.github} />

@@ -4,8 +4,11 @@ const Hero = () => {
     return (
         <section className="section">
             <div className="max-w-2xl flex flex-col gap-4">
-                <h1 className="font-bold text-4xl tracking-tight sm:text-5xl relative -left-[2px]">Front End Developer</h1>
-                <p>Soy Diego, tengo 35 años y soy desarrollador web front end hace casi 4 años. Trabajé en empresas y de forma freelance con varios clientes, tanto de Argentina como del exterior.</p>
+                <div>
+                    <h3 className="font-semibold">Diego Eliseo Iovane</h3>
+                    <h1 className="font-bold text-4xl tracking-tight sm:text-5xl relative -left-[2px]">Front End Developer</h1>
+                </div>
+                <p>Desarrollador web front end hace ~ 4 años. Trabajé en empresas y de forma freelance con varios clientes, tanto de Argentina como del exterior.</p>
                 <div className="flex flex-col lg:flex-row gap-4">
                     <div className="order-last lg:order-first">
                         <Social />

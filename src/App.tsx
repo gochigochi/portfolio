@@ -8,11 +8,13 @@ import { projects, sideProjects } from "./consts/projects"
 import { altStack, mainStack } from "./consts/stacks"
 import Footer from "./components/layout/footer/Footer"
 import Langs from "./components/langs/Langs"
+import Scroll from "./components/layout/scroll/Scroll"
 
 function App() {
   return (
     <div>
       <Nav />
+      <Scroll />
       <main className="flex flex-col gap-20 lg:gap-24 mt-6">
         <Hero />
         <div className="section grid gap-x-4 gap-y-16 lg:gap-y-2 grid-cols-12">
