@@ -34,10 +34,35 @@
 
 @layer components {
   .section {
-    @apply w-full max-w-6xl mx-auto px-4 sm:px-8;
+    @apply w-full max-w-6xl mx-auto px-2 sm:px-4 lg:px-8;
   }
 
   .icon {
     @apply text-slate-900 hover:text-slate-700 dark:text-slate-200 hover:dark:text-slate-50;
+  }
+
+  .box {
+    @apply bg-gray-100 dark:bg-zinc-800;
+  }
+
+  .bottom-border {
+    @apply border-b-[1px] pb-2 mb-2 border-zinc-300 dark:border-zinc-700;
+  }
+
+  .tooltip {
+    @apply relative;
+  }
+
+  .tooltip::before {
+    content: attr(data-text);
+    position: absolute;
+    bottom: 120%;
+    left: 50%;
+    transform: translateX(-50%);
+    @apply rounded-md p-2 text-center hidden bg-zinc-600 text-white;
+  }
+
+  .tooltip:hover:before {
+    display: block;
   }
 }

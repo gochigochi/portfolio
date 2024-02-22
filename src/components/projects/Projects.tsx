@@ -1,23 +1,22 @@
+import { Projects } from "../../types"
 import Project from "../project/Project"
-import { projects, sideProjects } from "./consts"
 
-const Projects = () => {
-  return (
-    <section className="section flex flex-col gap-20">
-        <h2>Proyectos Destacados</h2>
-        {
-            projects.map(project => {
-                return <Project project={project} />
-            })
-        }
-        <h2>Proyectos Personales</h2>
-        {
-            sideProjects.map(project => {
-                return <Project project={project} />
-            })
-        }
-    </section>
-  )
+type PropsTypes = {
+    title?: string
+    projects: Projects
+}
+
+const Projects = ({ title = "", projects }: PropsTypes) => {
+    return (
+        <section className="w-full max-w-6xl flex flex-col gap-12 lg:gap-20">
+            {title ? <h2>{title}</h2> : null}
+            {
+                projects.map(project => {
+                    return <Project key={project.client} project={project} />
+                })
+            }
+        </section>
+    )
 }
 
 export default Projects
