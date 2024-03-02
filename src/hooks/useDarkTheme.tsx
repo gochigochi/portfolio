@@ -5,11 +5,8 @@ const useDarkTheme = () => {
     const preference = window.matchMedia("(prefers-color-scheme: dark)")
     const [darkTheme, setDarkTheme] = useState(() => {
         // CHECK IF CLIENT HAS DARK THEME AS DEFAULT
-        // if (preference.matches) return true
-        // return false
-
-        //SET IT DEFAULT
-        return true
+        if (preference.matches) return true
+        return false
     })
 
     if (darkTheme) {
